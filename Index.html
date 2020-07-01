@@ -1,0 +1,852 @@
+<!DOCTYPE html PUBLIC>
+<html lang="fr">
+
+<head>
+  <title>WEB Maintenance</title>
+  <meta name="description" content="TV Maintenance" />
+  <meta name="keywords" content="Maintenance, maintenance, html, css, javascript" />
+  <meta name="author" content="Bormann Enzo" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="3600" />
+  <link rel="stylesheet" href="maintenance.css">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <script src="https://kit.fontawesome.com/f381b90e69.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Contenu principal -->
+  <a href="http://vs2-maint-app/"><div class="head"><img src="images/logo/Logo_Web.png" alt="Logo" id="logo"><p id="WebCom">Web'Com Maintenance</p></div></a>
+  <!-- Partie de gauche -->
+  <div class="aside_gauche">
+    <div class="ordres">
+    <h1 class="NoMargin">Ordres totaux</h1>
+    <div id="usines">
+      <p>U1</p>
+      <p>U2</p>
+      <p>U3</p>
+      <p>LVR</p>
+    </div>
+    <canvas id="canvas" class="bar_graph2"></canvas>
+    <div class="legende">
+      <p style="color:#04cf04">Ouverts prêts</p>
+      <p style="color:orange">Hors délais</p>
+      <p style="color:#0051ff">Autres</p>
+    </div>
+  </div>
+    <div class="tous_les_baro">
+    <div class="noms">
+      <p>Pannes ouvertes</p>
+      <p>Avis sans ordres</p>
+    </div>
+    <h4 class="h4SansMargin">Indicateurs maint U1</h4>
+      <div class="baro">
+        <canvas id="canvas1" class="bar_graph"></canvas>
+        <canvas id="canvas2" class="bar_graph"></canvas>
+      </div>
+      <h4 class="h4SansMargin">Indicateurs maint U2</h4>
+      <div class="baro">
+        <canvas id="canvas3" class="bar_graph"></canvas>
+        <canvas id="canvas4" class="bar_graph"></canvas>
+      </div>
+      <h4 class="h4SansMargin">Indicateurs maint U3</h4>
+      <div class="baro">
+        <canvas id="canvas5" class="bar_graph"></canvas>
+        <canvas id="canvas6" class="bar_graph"></canvas>
+      </div>
+      <h4 class="h4SansMargin">Indicateurs maint LVR</h4>
+      <div class="baro">
+        <canvas id="canvas7" class="bar_graph"></canvas>
+        <canvas id="canvas8" class="bar_graph"></canvas>
+      </div>
+    </div>
+  </div>
+  <!--navigation-->
+  <div class="navigation">
+    <ul class="nav2">
+      <a href="http://vs2-maint-app/">
+        <li class="nav">
+        <i id="home" class="fas fa-home" style="font-size:2.7vw;margin:0.25vw 1vw 0 1vw"></i>
+        </li>
+      </a>
+      <li class="nav">
+        <a href="http://delphes/fr/portailSALM/Pages/Default.aspx"><p>Portail Schmidt Groupe</p></a>
+      </li>
+      <li class="nav"><a href="packs.html">
+          <p>Les packs</p>
+        </a></li>
+    </ul>
+  </div>
+  <!-- Nouvel arrivant -->
+  <div class="arrivant">
+    <ul id="arrivant" >
+      <p id="nouveau_arrivant">ARRIVANT</p>
+      <ul>
+        <!-- Ici pour changer les différentes informations -->
+        <li id="NA_Site"></li>
+        <li id="NA_Date"></li>
+        <li id="NA_Nom"></li>
+        <li id="NA_Prenom"></li>
+        <li id="NA_Age"></li>
+        <li id="NA_Metier"></li>
+        <li id="NA_Passion"></li>
+      </ul>
+    </ul>
+    <img src="images/portrait/portrait.jpg" onerror="this.onerror=null;this.src='images/portrait/portrait.png';" alt="portrait">
+  </div>
+  <div class="page">
+    <div class="news">
+      <div class="slideshow-container" id="slideshow">
+
+        <!-- Boutons souivant et précédents -->
+        <a class="prev" onclick="plusSlides(-1)" style="display:none">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" style="display:none">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- Les poits qui permettent d'accéder aux autres photos !! ATTENTION !! changer le nombre de points si on ajoute/enlève une image -->
+      <div id="points"></div>
+    </div>
+    <!--partie de droite-->
+    <div class="aside_droit">
+      <h1><a href="file:///\\vsm-file-1\srv_files\DP_Maintenance">Les essentiels maintenance</a></h1>
+      <p id="atelier">Maintenance ateliers :</p>
+      <div class="enligne">
+        <a href="file:///\\vsm-file-1\srv_files\DPP\Atelier Maintenance"><img src="images/menu_droite/maint_u1.png" alt="U1"></a>
+        <a href="file:///\\vsm-file-1\srv_files\DPM\07 Ateliers Maitenance\4 Atelier Maintenance SU2"><img src="images/menu_droite/maint_u2.png" alt="U2"></a>
+        <a href="file:///\\vsm-file-1\srv_files\DPP\Atelier Maintenance"><img src="images/menu_droite/maint_u3.png" alt="U3"></a>
+        <a href="file:///\\vsm-file-1\srv_files\DPM\07 Ateliers Maitenance\3 Atelier Maintenance LVR"><img src="images/menu_droite/maint_LVR.png" alt="LVR"></a>
+      </div>
+      <div class="essentiels">
+      <a class="enligne" href="file:///\\vsm-file-1\srv_files\DP_Sécurité"><img src="images/menu_droite/securite.png" alt="sécurité">
+        <p>Sécurité</p>
+      </a>
+      <a class="enligne" href="file://///vsm-file-1/srv_files/DP_Maintenance/3 Communication Maintenance/1 Processus Maintenance "><img src="images/menu_droite/processus.png" alt="processus">
+        <p>Processus</p>
+      </a>
+      <a class="enligne" href="file:///\\vsm-file-1\srv_files\DP_Maintenance\Annuaire.xlsm" download="Annuaire"><img src="images/menu_droite/annuaire.png" alt="annuaire" style="background-color: transparent;">
+        <p>Annuaire</p>
+      </a>
+      <a class="enligne" href="file:///\\vs2-maint-file\Maint\Documents SPS"><img src="images/menu_droite/documents.png" alt="documents">
+        <p id="SPS">Documents SPS</p>
+      </a>
+      <a class="enligne" href="file:///\\vs2-maint-file\Maint\Documentation technique"><img src="images/menu_droite/doc_technique.png" alt="Doc technique">
+        <p>Documents   techniques</p>
+      </a>
+      <a class="enligne" href="file:///\\vs2-maint-file\Maint\Documentation machines"><img src="images/menu_droite/doc_machines.png" alt="doc machine">
+        <p>Documents     machines</p>
+      </a>
+      <a class="enligne" href="file:///\\vsm-file-1\srv_files\DP_TPM\Fonctionnement TPM "><img src="images/menu_droite/TPM.png" alt="TPM">
+        <p>TPM</p>
+      </a>
+      <a class="enligne" href="file:///\\vsm-file-1\srv_files\DDI\0 Direction\3 Documents de Gestion de Projets\2 CDC et Référentiels de référence"><img src="images/menu_droite/CDC.png" alt="CDC">
+        <p>Cahier des charges & référentiels</p></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.7.4-a/xls.core.min.js"></script>  
+<script type="text/javascript">
+
+var interval = 15; //temps de changement de chaque diapo
+
+//Changer les paramètres en fonction du navigateur utilisé
+var navigateur = navigator.userAgent;
+var est_ce_Edge = navigateur.indexOf("Edge");
+if (est_ce_Edge != -1) //si le navigateur est Edge
+{
+  var arrivant = document.getElementById("text_vertical");
+  //arrivant.style.display = "none";
+  //document.getElementById("arrivant").style.margin = "0.75vw auto 0.5vw 1vw"
+  var nav = document.getElementsByClassName("navigation")
+  nav[0].style.width = "50vw";
+  document.getElementsByClassName("navigation")[0].style.width = null;
+  document.getElementsByClassName("navigation")[0].style.width = "49vw";
+}
+
+//Recherche des valeurs pour les indicateurs
+var indice_tableau = ["0","4","2","6","1","5","3","7","8","9","10","11","12","13","14","15","16","17","18","19"]; //indice des tableau en fonction de la position des valeurs dnas le tableau EXCEL indicateurs
+var indice_tab = 0;
+var aiguilleX = ["75","75","76","78","80","83","88.4","93.8","99.2","104.6","110","118","126","134","142","150","161.4","172.8","184.2","195.6","207","215","220","224","226","227"]
+var aiguilleY =["144","137.2","130.4","123.6","116.8","110","100","93","88","84","80","76","72","70","69","68","69","71","75","82","92","102.4","112.8","123.2","133.6","144"]
+
+var radian = [[(7/6),(8/6),2],[(3/2),(7/4),2],[(8/6),(3/2),2]];
+var echelle_baro = [1,2,0,2];
+var rayon = 100; //rayon des 2 baromètres
+var valeurs;
+var z = 0; //indice pour remplir le tableau extrait d'un fichier JS
+var ordres = 0; //initialisation nombres des autres ordres
+var ordres_prêts = 0; //initialisation nombre d'ordres ouverts prêts
+var ordres_hors_delais = 0; //initialisation nombre d'ordres hors-délais
+var proportion_ordres_prêts = 0; //initialisation de la proportion d'ordres prêts
+var proportion_ordres_hors_delais = 0; //initialisation de la proportion d'ordres hors-délais
+var proportion_ordres = 0 //initialisation de la proportion des autres ordres
+var number = ["0","1","2","3","4","5","6","7","8","9"]; //table de référence des nombres 
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",".","_",","," ","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]; //table de référence des lettres + . + _ + , 
+
+indicateurs();
+
+//transformation de la feuille excel indicateurs_portail_maintenance en JSON pour être exploitable par JS
+function indicateurs()
+{
+valeurs = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]; //remise à vide du tableau des valeurs pour éviter un de mauvaises valeurs
+var url = "Indicateurs_portail_maintenance.xlsx"; //nom du fichier contenant les chiffres pour les indicateurs (à changer si le nom change)
+var oReq = new XMLHttpRequest();
+oReq.open("GET", url, true);
+oReq.responseType = "arraybuffer";
+
+oReq.onload = function(e) {
+var arraybuffer = oReq.response;
+
+//convertir des valeurs en liste binaire 
+var data = new Uint8Array(arraybuffer);
+var arr = new Array();
+for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+var bstr = arr.join("");
+
+// appel du XLSX
+var workbook = XLSX.read(bstr, {
+    type: "binary"
+});
+
+// travailler avec les worksheet
+var first_sheet_name = workbook.SheetNames[0];
+
+// avoir le worksheet
+var worksheet = workbook.Sheets[first_sheet_name];
+var json_1 = XLSX.utils.sheet_to_json(worksheet, {
+    raw: true
+});
+var json_2 = (JSON.stringify(json_1,null,2));
+var json_test = JSON.parse(json_2)
+function help(json_test)
+{
+  //console.log(json_test[0].__EMPTY_1)
+  if (isNaN(json_test[1].__EMPTY_1))
+  {
+  var u = 0
+  for (let s = 1 ; s < 6 ; s++)
+  {
+      valeurs[u] = json_test[s].__EMPTY_2
+      u++
+      valeurs[u] = json_test[s].__EMPTY_3
+      u++
+      valeurs[u] = json_test[s].__EMPTY_4
+      u++
+      valeurs[u] = json_test[s].__EMPTY_5
+      u++
+  }
+  }
+  else
+  {
+  var u = 0
+  for (let s = 1 ; s < 6 ; s++)
+  {
+      valeurs[u] = json_test[s].__EMPTY_1
+      u++
+      valeurs[u] = json_test[s].__EMPTY_2
+      u++
+      valeurs[u] = json_test[s].__EMPTY_3
+      u++
+      valeurs[u] = json_test[s].__EMPTY_4
+      u++
+  }
+  }
+  var easy = new Array;
+  for (let s = 0 ; s < valeurs.length ; s++)
+  {
+    easy[s] = valeurs[indice_tableau[s]]
+  }
+  console.log("Indicateurs = " + easy)
+  return valeurs
+}
+valeurs = help(json_test)
+
+var canvas = document.getElementsByClassName('bar_graph');
+var l = 0;
+//dessin des différents indicateurs
+for(let j = 0 ; j < canvas.length ; j++)
+{
+  var ctx = canvas[j].getContext('2d');
+  clear_rectangle(ctx,canvas)
+}
+for (var i = 0 ; i < canvas.length ; i++)
+{
+    var ctx = canvas[i].getContext('2d');
+    dessine_graph(valeurs,l,ctx,canvas);
+    l++;
+}
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var b = 8;
+//nettoyer l'ancien bar graph
+clear_rectangle(ctx,canvas)
+//fonction qui cherche le maximum d'ordres par usines
+var maximum = 0;
+for (let f = 0 ; f < 3 ; f++)
+{
+  if (valeurs[12+f]>maximum)
+    maximum = valeurs[12+f]
+}
+for (let a = 0 ; a < 4 ; a++)
+{
+  ordres_hors_delais = valeurs[b];
+  ordres_prêts = valeurs[b+8];
+  ordres = valeurs[b+4] - ordres_prêts - ordres_hors_delais;
+  if (a%2 == 0)
+    b += 2
+  else if (a%2 == 1)
+    b -= 1
+  dessine_bar_graph(a,ctx,canvas,maximum);
+}
+}
+oReq.send();
+var now = new Date()
+  if (now.getMinutes() == 1)
+  {
+    setTimeout(indicateurs,3600)
+  }
+  else
+  {
+    var now = new Date()
+    var heure = now.getMinutes()
+    var minutes = 60 - heure;
+    setTimeout(indicateurs,1000*60*(minutes + 3))
+  }
+}
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+//transformation de la feuille excel images en JSON pour être exploitable par JS
+var url2 = "diaporama.xls";
+var oReq2 = new XMLHttpRequest();
+oReq2.open("GET", url2, true);
+oReq2.responseType = "arraybuffer";
+var valeurs2 = new Array();
+
+oReq2.onload = function(e) {
+var arraybuffer2 = oReq2.response;
+
+//convertir des valeurs en liste binaire 
+var data2 = new Uint8Array(arraybuffer2);
+var arr2 = new Array();
+for (var i = 0; i != data2.length; ++i) 
+arr2[i] = String.fromCharCode(data2[i]);
+var bstr2 = arr2.join("");
+
+// appel du XLSX
+var workbook2 = XLSX.read(bstr2, {
+    type: "binary"
+});
+
+// travailler avec les worksheet
+var first_sheet_name2 = workbook2.SheetNames[0];
+
+// avoir le worksheet
+var worksheet2 = workbook2.Sheets[first_sheet_name2];
+var test42 = XLSX.utils.sheet_to_json(worksheet2, {
+    raw: true
+});
+var test22 = (JSON.stringify(test42,null,2));
+var json_test2 = JSON.parse(test22)
+valeurs2 = lis_le_json(json_test2)
+function lis_le_json(json_test2)
+{
+  var test123 = new Array()
+  for( let m = 0 ; m < json_test2.length ; m++)
+    test123[m] = json_test2[m].photo
+  return test123
+}
+var sources = new Array()
+for(let k=0 ; k < json_test2.length ; k++)
+{
+  sources[k] = json_test2[k].source
+}
+console.log(json_test2[1].source)
+ajout_images(valeurs2,sources);
+var slides = document.getElementsByClassName("mySlides");
+carousel(slides);
+}
+
+oReq2.send();
+
+//fonction qui ajoute les images
+function ajout_images(valeurs2,sources)
+{
+  var elt2 = document.createElement("div");
+    elt2.setAttribute("id","deuxieme");
+    document.getElementById("slideshow").appendChild(elt2);
+  for (let h = 0 ; h < valeurs2.length ; h++)
+  {
+      if (!valeurs2[h].indexOf("REX"))
+      {
+        var elt1 = document.createElement("a");
+        elt1.setAttribute("href","file:///\\vs2-maint-file\\Maint\\Documents SPS");
+        elt1.setAttribute("target","_blank");
+      }
+      else if (!valeurs2[h].indexOf("LP"))
+      {
+        var elt1 = document.createElement("a");
+        elt1.setAttribute("href","file:///\\vs2-maint-file\\Maint\\Documents SPS");
+        elt1.setAttribute("target","_blank");
+      }
+      else if (sources[h] != undefined)
+      {
+        var elt1 = document.createElement("a");
+        elt1.setAttribute("href",sources[h]);
+        elt1.setAttribute("target","_blank");
+      }
+      else
+      {
+        var elt1 = document.createElement("div");
+      }
+    
+    elt1.setAttribute("class","mySlides");
+    elt1.setAttribute("id","image"+h);
+    document.getElementById("deuxieme").appendChild(elt1);
+    let elt = document.createElement("img");
+    elt.setAttribute("src","images/diaporama/"+valeurs2[h]);
+    elt.setAttribute("style","width:100%")
+    elt.setAttribute("alt","News Web'Com Maintenance en panne. Contacter Daniel Farnieras")
+    document.getElementById("image"+h).appendChild(elt);
+    let dots = document.createElement("span");
+    dots.setAttribute("class","dot");
+    let index = h+1;
+    dots.setAttribute("onclick","currentSlide("+index+")")
+    document.getElementById("points").appendChild(dots);
+  }
+  console.log(valeurs2)
+}
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+//transformation de la feuille excel arrivant en JSON pour être exploitable par JS
+var url3 = "arrivant.xlsx";
+var oReq3 = new XMLHttpRequest();
+oReq3.open("GET", url3, true);
+oReq3.responseType = "arraybuffer";
+var valeurs3 = new Array();
+
+oReq3.onload = function(e) {
+var arraybuffer3 = oReq3.response;
+
+//convertir des valeurs en liste binaire 
+var data3 = new Uint8Array(arraybuffer3);
+var arr3 = new Array();
+for (var i = 0; i != data3.length; ++i) 
+arr3[i] = String.fromCharCode(data3[i]);
+var bstr2 = arr3.join("");
+
+// appel du XLSX
+var workbook3 = XLSX.read(bstr2, {
+    type: "binary"
+});
+
+// travailler avec les worksheet
+var first_sheet_name3 = workbook3.SheetNames[0];
+
+// avoir le worksheet
+var worksheet3 = workbook3.Sheets[first_sheet_name3];
+var json_text = XLSX.utils.sheet_to_json(worksheet3, {
+    raw: true
+});
+var arr_string1 = (JSON.stringify(json_text,null,2));
+var arr_parse = JSON.parse(arr_string1)
+console.log(arr_parse)
+ajout_nv_arrivant(arr_parse);
+}
+
+oReq3.send()
+
+function ajout_nv_arrivant(arr_parse)
+{
+  let h = 0;
+    document.getElementById("NA_Site").textContent = "Site : " + arr_parse[h].ARRIVANT
+    h++;
+    document.getElementById("NA_Date").textContent = "Date : " + arr_parse[h].ARRIVANT
+    h++;
+    document.getElementById("NA_Nom").textContent = "Nom : " + arr_parse[h].ARRIVANT
+    h++;
+    document.getElementById("NA_Prenom").textContent = "Prénom : " + arr_parse[h].ARRIVANT
+    h++;
+    document.getElementById("NA_Age").textContent = "Age : " + arr_parse[h].ARRIVANT
+    h++;
+    document.getElementById("NA_Metier").textContent = "Metier : " + arr_parse[h].ARRIVANT
+    h++;
+    document.getElementById("NA_Passion").textContent = "Passion : " + arr_parse[h].ARRIVANT
+    h++;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+//calculs proportions bar graph
+//fonction qui calcul la proportion de chaque ordres en fonction de l'usine
+function proportion(maximum)
+{
+  proportion_ordres = ordres / maximum;
+  proportion_ordres_prêts = ordres_prêts / maximum;
+  proportion_ordres_hors_delais = ordres_hors_delais/maximum;
+}
+
+function dessine_bar_graph(i,ctx,canvas,maximum)
+{
+  //calcul de la proportion pour chaques couches du graph
+  proportion(maximum);
+  var maximale = 150; //taille maximale en pixel
+  //écriture de l'échelle
+  if (i == 0) //uniquement lors du premier passage
+  {
+    ctx.beginPath()
+    ctx.font = '1em serif';
+    ctx.fillStyle = 'black';
+    ctx.fillText(maximum, 10, 11);
+    ctx.fillText(Number.parseInt(maximum/2), 10, 79);
+    ctx.fillText(maximum, 10, 11);
+    ctx.fillText(Number.parseInt(maximum/2), 10, 79);
+    ctx.stroke();
+    var hauteur_echelle = ((Math.trunc(maximum/100)*100)*maximale/maximum)
+    var echelle = Math.trunc(hauteur_echelle)/(Math.trunc(maximum/100))
+    for (let j = 0 ; j < Number.parseInt(maximum/100) ; j++)
+    {
+      ctx.beginPath()
+      ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+      ctx.lineWidth = '2';
+      let hauteur = Number.parseInt(maximale) - echelle * (j+1)
+      ctx.moveTo(40,hauteur);
+      ctx.lineTo(290,hauteur);
+      ctx.stroke();
+    }
+    if (maximum%100 != 0)
+    {
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+    ctx.lineWidth = '2';
+    ctx.moveTo(40,1);
+    ctx.lineTo(290,1);
+    ctx.stroke();
+    ctx.restore();
+    }
+
+  }
+  var hauteurmax = maximale - (proportion_ordres_hors_delais * maximale + proportion_ordres_prêts * maximale + proportion_ordres * maximale)
+  var hauteur3 = proportion_ordres_hors_delais * maximale + proportion_ordres_prêts * maximale + proportion_ordres * maximale
+  var hauteur2 = proportion_ordres_hors_delais * maximale + proportion_ordres_prêts * maximale
+  var hauteur1 = proportion_ordres_prêts * maximale;
+  var hauteurDep = [hauteurmax,hauteurmax+hauteur1,hauteurmax+hauteur2]; //hauteur de départ des différentes couches du graph
+  var hauteur = [hauteurmax+hauteur1,hauteurmax+hauteur2,hauteurmax+hauteur3]; //hauteur de final de différentes couches du graph
+  var couleur = ['#04cf04','orange',"#0051ff"]; //couleurs des différentes couches
+  var positionX = [51,112,175,242]; // position horizontale des barres
+  //dessin du bar graph
+  for (let j = 0 ; j<hauteur.length; j++)
+  {
+    ctx.beginPath();
+    ctx.strokeStyle = couleur[j];
+    ctx.lineTo(positionX[i], hauteur[j]);
+    ctx.stroke();
+    ctx.lineTo(positionX[i]+40,hauteur[j]);
+    ctx.stroke();
+    ctx.lineTo(positionX[i]+40,hauteurDep[j]);
+    ctx.stroke();
+    ctx.lineTo(positionX[i],hauteurDep[j]);
+    ctx.stroke();
+    ctx.fillStyle = couleur[j];
+    ctx.fill();
+    ctx.stroke();
+   }
+}
+
+function clear_rectangle(ctx,canvas)
+{
+  ctx.clearRect(0,0,canvas.width,canvas.height)
+  ctx.closePath()
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+var slideIndex = 0;
+var stopCarousel = false;
+var timeOut;
+var dessus_image;
+
+
+//fonction qui permet de faire défiler les images
+function carousel(slides) {
+  if (!stopCarousel)
+  {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < x.length; i++) 
+    {
+      x[i].style.display = "none";  
+    }
+  slideIndex++;
+  if (slideIndex > x.length)
+    {
+      slideIndex = 1
+    }    
+  x[slideIndex-1].style.display = "block";
+
+  for (i = 0; i < dots.length; i++)
+    {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  dots[slideIndex-1].className += " active";
+  slideIndex = slideIndex%(dots.length); //modulo le nombre de photos
+  timeOut = setTimeout(carousel, interval*1000); // Change toutes les intervalles
+  }
+}
+
+//showSlides(slideIndex,slides);
+
+// Next/previous controls
+function plusSlides(n,slides) {
+  showSlides(slideIndex += n,slides);
+}
+
+// Thumbnail image controls
+function currentSlide(n,slides) {
+  showSlides(slideIndex = n,slides);
+}
+
+function showSlides(n,slides) {
+  if (!dessus_image)
+    clearTimeout(timeOut);
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length)
+    {
+        slideIndex = 1
+    } 
+  if (n < 1) 
+    {
+      slideIndex = slides.length
+    }
+  for (i = 0; i < slides.length; i++) 
+    {
+      slides[i].style.display = "none"; 
+    }
+  for (i = 0; i < dots.length; i++)
+    {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+  /*if (!dessus_image)
+    timeOut = setTimeout(carousel, interval*1000);*/
+  dessus_image = false
+} 
+
+var slideAct = document.getElementById("slideshow");
+
+slideAct.addEventListener("mouseover",function(){
+  clearTimeout(timeOut);
+  document.getElementsByClassName("next")[0].style.background = "rgba(0,0,0,0.8)";
+  document.getElementsByClassName("prev")[0].style.background = "rgba(0,0,0,0.8)";
+  document.getElementsByClassName("next")[0].style.display = "";
+  document.getElementsByClassName("prev")[0].style.display = "";
+  dessus_image = true
+});
+
+slideAct.addEventListener("mouseout", function(){
+  document.getElementsByClassName("next")[0].style.display = "none";
+  document.getElementsByClassName("prev")[0].style.display = "none";
+  document.getElementsByClassName("next")[0].style.background = "";
+  document.getElementsByClassName("prev")[0].style.background = "";
+  timeOut = setTimeout(carousel, interval*1000);
+});
+
+var news = document.getElementsByClassName("news")[0];
+
+news.addEventListener("mouseover", function(){
+  document.getElementById("points").style.display = "block";
+});
+
+news.addEventListener("mouseout", function(){
+  document.getElementById("points").style.display = "none";
+});
+//-----------------------------------------------------------------------------------------------------------------------------
+
+//partie indicateurs
+
+function Norm(xA,yA,xB,yB) {
+  return Math.sqrt(Math.pow(xB-xA,2)+Math.pow(yB-yA,2));
+} 
+
+function Vecteur (xA,yA,xB,yB,ArrowLength,ArrowWidth,ctx) {
+  xA = parseFloat(xA) 
+  yA = parseFloat(yA)
+  xB = parseFloat(xB)
+  yB = parseFloat(yB)
+  if (ArrowLength === undefined) {ArrowLength=10;} 
+  if (ArrowWidth === undefined) {ArrowWidth=8;} 
+  ctx.lineCap="round"; 
+// Calculs des coordonnées des points C, D et E 
+  AB=Norm(xA,yA,xB,yB); 
+  xC=xB+ArrowLength*(xA-xB)/AB;yC=yB+ArrowLength*(yA-yB)/AB; 
+  xD=xC+ArrowWidth*(-(yB-yA))/AB;yD=yC+ArrowWidth*((xB-xA))/AB; 
+  xE=xC-ArrowWidth*(-(yB-yA))/AB;yE=yC-ArrowWidth*((xB-xA))/AB; 
+  // et on trace le segment [AB], et sa flèche: 
+  ctx.beginPath(); 
+  ctx.moveTo(xA,yA);ctx.lineTo(xB,yB); 
+  ctx.moveTo(xD,yD);ctx.lineTo(xB,yB);ctx.lineTo(xE,yE); 
+  ctx.stroke(); 
+} 
+
+function dessine_graph(valeurs,i,ctx,canvas)
+{
+  if (i%2 == 0)
+  {
+    //dessin du quart rouge
+    console.log(echelle_baro[3])
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.arc(150,150,100,radian[echelle_baro[i/2]][1]*Math.PI,radian[echelle_baro[i/2]][2]*Math.PI);
+    ctx.stroke();
+    ctx.lineTo(150,150);
+    ctx.stroke();
+    ctx.fillStyle = 'red'
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'orange';
+    ctx.arc(150,150,100,radian[echelle_baro[i/2]][0]*Math.PI,radian[echelle_baro[i/2]][1]*Math.PI);
+    ctx.stroke();
+    ctx.lineTo(150,150);
+    ctx.stroke();
+    ctx.fillStyle = "orange"
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.strokeStyle = '#00c427';
+    ctx.arc(150,150,100,Math.PI,radian[echelle_baro[i/2]][0]*Math.PI);
+    ctx.stroke();
+    ctx.lineTo(150,150);
+    ctx.stroke();
+    ctx.fillStyle = "#00c427"
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = "20";
+    ctx.arc(150,150,10,Math.PI,2*Math.PI);
+    ctx.stroke();
+    ctx.restore();
+    ctx.closePath();
+
+    ctx.clearRect(1,1,canvas.width,canvas.height)
+      ctx.font = '1.75em serif';
+      ctx.fillStyle = 'black';
+      ctx.fillText('0',30,150);
+      ctx.fillText(5,40,100);
+      ctx.fillText(10, 76, 58);
+      ctx.fillText(15,140,40);
+      ctx.fillText(20, 230, 80);
+      ctx.fillText("+25", 256, 150);
+      ctx.restore();
+  }
+  else
+  {
+    //dessin du quart rouge
+    ctx.beginPath();
+    ctx.strokeStyle = 'red';
+    ctx.arc(150,150,100,(5/3)*Math.PI,2*Math.PI);
+    ctx.stroke();
+    ctx.lineTo(150,150);
+    ctx.stroke();
+    ctx.fillStyle = 'red'
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'orange';
+    ctx.arc(150,150,100,(4/3)*Math.PI,(5/3)*Math.PI);
+    ctx.stroke();
+    ctx.lineTo(150,150);
+    ctx.stroke();
+    ctx.fillStyle = "orange"
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+
+    ctx.beginPath();
+    ctx.strokeStyle = '#00c427';
+    ctx.arc(150,150,100,Math.PI,(4/3)*Math.PI);
+    ctx.stroke();
+    ctx.lineTo(150,150);
+    ctx.stroke();
+    ctx.fillStyle = "#00c427"
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+    
+    ctx.beginPath();
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = "20";
+    ctx.arc(150,150,10,Math.PI,2*Math.PI);
+    ctx.stroke();
+    ctx.restore();
+    ctx.closePath();
+
+    ctx.clearRect(1,1,canvas.width,canvas.height)
+      ctx.font = '1.75em serif';
+      ctx.fillStyle = 'black';
+      ctx.fillText('0',30,150);
+      ctx.fillText(10, 76, 58);
+      ctx.fillText(20, 199, 58);
+      ctx.fillText("+30", 256, 150);
+      ctx.restore();
+  }
+  indice_tab = valeurs[indice_tableau[i]]
+    /*if (i == 0)
+    {
+      indice_tab = valeurs[indice_tableau[i]]
+      if (valeurs[indice_tableau[i]] > 25)
+        indice_tab = aiguilleX.length - 1
+    }
+    else if (i == 4)
+    {
+      if (valeurs[indice_tableau[i]] <= 5)
+        indice_tab = (valeurs[indice_tableau[i]]) * 3;
+      else if (valeurs[indice_tableau[i]] <= 15)
+        indice_tab = valeurs[indice_tableau[i]]+10
+      else
+        indice_tab = aiguilleX.length - 1
+    }
+    else if (i%2 == 0)
+    {
+      if (valeurs[indice_tableau[i]] <= 10)
+        indice_tab = Math.trunc(valeurs[indice_tableau[i]] / (2/3))
+      else if (valeurs[indice_tableau[i]] <= 20)
+      indice_tab = 5+valeurs[indice_tableau[i]]
+      else
+        indice_tab = aiguilleX.length - 1
+    }*/
+    if (i%2 == 1)
+    {
+      if (valeurs[indice_tableau[i]] <= 15)
+        indice_tab = valeurs[indice_tableau[i]]
+      else if (valeurs[indice_tableau[i]] <= 20)
+        indice_tab = valeurs[indice_tableau[i]]-1
+      else if (valeurs[indice_tableau[i]] <= 30)
+        indice_tab = (Math.trunc((valeurs[indice_tableau[i]]-10)/2)+15)
+      else
+        indice_tab = aiguilleX.length - 1
+    }
+
+    ctx.strokeStyle = 'black';   
+    ctx.lineWidth = "6";
+    Vecteur(151,144,aiguilleX[indice_tab],aiguilleY[indice_tab],10,9,ctx);
+  };
+   
+</script>
+</html>
